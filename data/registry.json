@@ -1,0 +1,237 @@
+{
+  "$comment": "Curated, hand-maintained entries grouped by protocol. Entries inherit the protocol's category unless they set their own. Fee recipients, authorities and PDAs that live on-chain are produced by `npm run sync` into synced.json instead of being typed in here. Run `npm run verify` after editing.",
+  "protocols": [
+    { "name": "Pump.fun", "category": "launchpad", "website": "https://pump.fun",
+      "entries": [
+        { "address": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P", "name": "Pump.fun bonding curve program", "type": "program", "source": "repo" },
+        { "address": "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ", "name": "Pump fees program", "type": "program", "notes": "Shared fee/tier program used by Pump.fun and PumpSwap.", "source": "repo" },
+        { "address": "pfnP85qobXv2wETniKjXBhxKvgivpfT8EGAcS8sb3bq", "name": "Pump.fun fee wallet", "type": "wallet", "source": "repo" }
+      ]
+    },
+    { "name": "PumpSwap", "category": "dex", "website": "https://swap.pump.fun",
+      "entries": [
+        { "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA", "name": "PumpSwap AMM program", "type": "program", "notes": "Pump.fun tokens migrate here after the bonding curve completes.", "source": "repo" }
+      ]
+    },
+    { "name": "Raydium", "category": "dex", "website": "https://raydium.io",
+      "entries": [
+        { "address": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8", "name": "Raydium AMM v4 program", "type": "program" },
+        { "address": "5Q544fKrFoe6tsEbD7S8EmxGTJYAKtTVhAW5Q5pge4j1", "name": "Raydium AMM v4 authority", "type": "authority", "notes": "Owns the token vaults of every AMM v4 pool." },
+        { "address": "7YttLkHDoNj9wyDur5pM1ejNaAvT9X4eqaYcHQqtj2G5", "name": "Raydium AMM v4 pool-creation fee wallet", "type": "fee-recipient" },
+        { "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C", "name": "Raydium CPMM program", "type": "program" },
+        { "address": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL", "name": "Raydium CPMM vault authority", "type": "authority" },
+        { "address": "DNXgeM9EiiaAbaWvwjHj9fQQLAX5ZsfHyvmYUNRAdNC8", "name": "Raydium CPMM pool-creation fee wallet", "type": "fee-recipient" },
+        { "address": "CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK", "name": "Raydium CLMM program", "type": "program" },
+        { "address": "5quBtoiQqxF9Jv6KYKctB59NT3gtJD2Y65kdnB1Uev3h", "name": "Raydium stable swap program", "type": "program" },
+        { "address": "routeUGWgWzqBWFcrCfv8tritsqukccJPu3q5GPP3xS", "name": "Raydium router program", "type": "program" },
+        { "address": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R", "name": "RAY token", "type": "mint", "category": "token" }
+      ]
+    },
+    { "name": "Raydium LaunchLab", "category": "launchpad", "website": "https://raydium.io/launchpad",
+      "entries": [
+        { "address": "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj", "name": "LaunchLab bonding curve program", "type": "program", "notes": "Backs bonk.fun (LetsBonk) and other LaunchLab platforms." },
+        { "address": "WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh", "name": "LaunchLab vault authority", "type": "authority" }
+      ]
+    },
+    { "name": "Meteora", "category": "dex", "website": "https://meteora.ag",
+      "entries": [
+        { "address": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo", "name": "Meteora DLMM program", "type": "program" },
+        { "address": "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB", "name": "Meteora Dynamic AMM (DAMM v1) program", "type": "program" },
+        { "address": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG", "name": "Meteora DAMM v2 program", "type": "program" },
+        { "address": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC", "name": "Meteora DAMM v2 pool authority", "type": "authority" },
+        { "address": "24Uqj9JCLxUeoC3hGfh5W3s9FM9uCHDS2SG3LYwBpyTi", "name": "Meteora Dynamic Vault program", "type": "program" },
+        { "address": "vaU6kP7iNEGkbmPkLmZfGwiGxd4Mob24QQCie5R9kd2", "name": "Meteora Alpha Vault program", "type": "program" }
+      ]
+    },
+    { "name": "Meteora Dynamic Bonding Curve", "category": "launchpad", "website": "https://meteora.ag",
+      "entries": [
+        { "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN", "name": "Meteora DBC program", "type": "program", "notes": "Bonding-curve launch infrastructure used by Believe, Bags and other launchpads." },
+        { "address": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM", "name": "Meteora DBC pool authority", "type": "authority" }
+      ]
+    },
+    { "name": "Moonshot", "category": "launchpad", "website": "https://moonshot.com",
+      "entries": [
+        { "address": "MoonCVVNZFSYkqNXP6bxHLPL6QQJiMagDL3qcqUQTrG", "name": "Moonshot bonding curve program", "type": "program" }
+      ]
+    },
+    { "name": "Boop", "category": "launchpad", "website": "https://boop.fun",
+      "entries": [
+        { "address": "boop8hVGQGqehUK2iVEMEnMrL5RbjywRzHKBmBE7ry4", "name": "Boop bonding curve program", "type": "program" }
+      ]
+    },
+    { "name": "Orca", "category": "dex", "website": "https://orca.so",
+      "entries": [
+        { "address": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc", "name": "Orca Whirlpools program", "type": "program" },
+        { "address": "2LecshUwdy9xi7meFgHtFJQNSKk4KdTrcpvaB56dP2NQ", "name": "Orca Whirlpools config", "type": "config" },
+        { "address": "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP", "name": "Orca token swap v2 program", "type": "program" },
+        { "address": "DjVE6JNiYqPL2QXyCUUh8rNjHrbz9hXHNYt99MQ59qw1", "name": "Orca token swap v1 program", "type": "program" },
+        { "address": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE", "name": "ORCA token", "type": "mint", "category": "token" }
+      ]
+    },
+    { "name": "Jupiter", "category": "aggregator", "website": "https://jup.ag",
+      "entries": [
+        { "address": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4", "name": "Jupiter Aggregator v6 program", "type": "program" },
+        { "address": "JUP4Fb2cqiRUcaTHdrPC8h2gNsA2ETXiPDD33WcGuJB", "name": "Jupiter Aggregator v4 program", "type": "program" },
+        { "address": "j1o2qRpjcyUwEvwtcfhEQefh773ZgjxcVRry7LDqg5X", "name": "Jupiter Limit Order v2 program", "type": "program" },
+        { "address": "jupoNjAxXgZ4rjzxzPMP4oxduvQsQtZzyknqvzYNrNu", "name": "Jupiter Limit Order v1 program", "type": "program" },
+        { "address": "DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M", "name": "Jupiter DCA program", "type": "program" },
+        { "address": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu", "name": "Jupiter Perpetuals program", "type": "program", "category": "dex" },
+        { "address": "REFER4ZgmyYx9c6He5XfaTMiGfdLwRnkV4RPp9t9iF3", "name": "Jupiter Referral program", "type": "program" },
+        { "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN", "name": "JUP token", "type": "mint", "category": "token" }
+      ]
+    },
+    { "name": "Phoenix", "category": "dex", "website": "https://phoenix.trade",
+      "entries": [
+        { "address": "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY", "name": "Phoenix order book program", "type": "program" }
+      ]
+    },
+    { "name": "OpenBook", "category": "dex", "website": "https://openbookdex.com",
+      "entries": [
+        { "address": "opnb2LAfJYbRMAHHvqjCwQxanZn7ReEHp1k81EohpZb", "name": "OpenBook v2 program", "type": "program" },
+        { "address": "srmqPvymJeFKQ4zGQed1GFppgkRHL9kaELCbyksJtPX", "name": "OpenBook v1 program", "type": "program" },
+        { "address": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin", "name": "Serum DEX v3 program", "type": "program" }
+      ]
+    },
+    { "name": "Lifinity", "category": "dex", "website": "https://lifinity.io",
+      "entries": [
+        { "address": "EewxydAPCCVuNEyrVN68PuSYdQ7wKn27V9Gjeoi8dy3S", "name": "Lifinity v1 program", "type": "program" }
+      ]
+    },
+    { "name": "Other DEXes", "category": "dex",
+      "entries": [
+        { "address": "SSwpkEEcbUqx4vtoEByFjSkhKdCT862DNVb52nZg1UZ", "name": "Saber stable swap program", "type": "program", "protocol": "Saber" },
+        { "address": "MERLuDFBMmsHnsBPZw2sDQZHvXFMwp8EdjudcU2HKky", "name": "Mercurial stable swap program", "type": "program", "protocol": "Mercurial" },
+        { "address": "FLUXubRmkEi2q6K3Y9kBPg9248ggaZVsoSFhtJHSrm1X", "name": "FluxBeam AMM program", "type": "program", "protocol": "FluxBeam" },
+        { "address": "SoLFiHG9TfgtdUXUjWAxi3LtvYuFyDLVhBWxdMZxyCe", "name": "SolFi program", "type": "program", "protocol": "SolFi" },
+        { "address": "obriQD1zbpyLz95G5n7nJe6a4DPjpFwa5XYPoNm113y", "name": "Obric v2 program", "type": "program", "protocol": "Obric" },
+        { "address": "ZERor4xhbUycZ6gb9ntrhqscUcZmAbQDjEAtCf4hbZY", "name": "ZeroFi program", "type": "program", "protocol": "ZeroFi" },
+        { "address": "TessVdML9pBGgG9yGks7o4HewRaXVAMuoVj4x83GLQH", "name": "Tessera V program", "type": "program", "protocol": "Tessera V" },
+        { "address": "goonERTdGsjnkZqWuVjs73BZ3Pb9qoCUdBUL17BnS5j", "name": "GoonFi program", "type": "program", "protocol": "GoonFi" },
+        { "address": "HyaB3W9q6XdA5xwpU4XnSZV94htfmbmqJXZcEbRaJutt", "name": "Invariant CLMM program", "type": "program", "protocol": "Invariant" },
+        { "address": "CLMM9tUoggJu2wagPkkqs9eFG4BWhVBZWkP1qv3Sp7tR", "name": "Crema CLMM program", "type": "program", "protocol": "Crema" },
+        { "address": "CURVGoZn8zycx6FXwwevgBTB2gVvdbGTEpvMJDbgs2t4", "name": "Aldrin AMM v2 program", "type": "program", "protocol": "Aldrin" }
+      ]
+    },
+    { "name": "Sanctum", "category": "staking", "website": "https://sanctum.so",
+      "entries": [
+        { "address": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx", "name": "Sanctum Infinity program", "type": "program" },
+        { "address": "stkitrT1Uoy18Dk1fTrgPw8W6MVzoCfYoAFT4MLsmhq", "name": "Sanctum router program", "type": "program" },
+        { "address": "SP12tWFxD9oJsVWNavTTBZvMbA6gkAmxtVgxdqvyvhY", "name": "Sanctum SPL stake pool program", "type": "program" }
+      ]
+    },
+    { "name": "Jito", "category": "mev", "website": "https://jito.network",
+      "entries": [
+        { "address": "T1pyyaTNZsKv2WcRAB8oVnk93mLJw2XzjtVYqCsaHqt", "name": "Jito tip payment program", "type": "program" },
+        { "address": "4R3gSG8BpU4t19KYj8CfnbtRpnT8gtk4dvTHxVRwc2r7", "name": "Jito tip distribution program", "type": "program" },
+        { "address": "Jito4APyf642JPZPx3hGc6WWJ8zPKtRbRs4P815Awbb", "name": "Jito stake pool", "type": "config", "category": "staking" },
+        { "address": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn", "name": "JitoSOL", "type": "mint", "category": "token" },
+        { "address": "jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL", "name": "JTO token", "type": "mint", "category": "token", "source": "repo" }
+      ]
+    },
+    { "name": "Marinade", "category": "staking", "website": "https://marinade.finance",
+      "entries": [
+        { "address": "MarBmsSgKXdrN1egZf5sqe1TMai9K1rChYNDJgjq7aD", "name": "Marinade staking program", "type": "program" },
+        { "address": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So", "name": "mSOL", "type": "mint", "category": "token" }
+      ]
+    },
+    { "name": "Lending & Perps", "category": "lending",
+      "entries": [
+        { "address": "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD", "name": "Kamino Lend program", "type": "program", "protocol": "Kamino" },
+        { "address": "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc", "name": "Kamino Liquidity program", "type": "program", "protocol": "Kamino" },
+        { "address": "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA", "name": "marginfi v2 program", "type": "program", "protocol": "marginfi" },
+        { "address": "So1endDq2YkqhipRh3WViPa8hdiSpxWy6z3Z6tMCpAo", "name": "Solend program", "type": "program", "protocol": "Solend" },
+        { "address": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH", "name": "Drift v2 program", "type": "program", "protocol": "Drift", "category": "dex" }
+      ]
+    },
+    { "name": "Oracles", "category": "oracle",
+      "entries": [
+        { "address": "FsJ3A3u2vn5cTVofAjvy6y5kwABJAqYWpe4975bi2epH", "name": "Pyth oracle program (legacy)", "type": "program", "protocol": "Pyth" },
+        { "address": "rec5EKMGg6MxZYaMdyBfgwp4d5rB9T1VQH5pJv5LtFJ", "name": "Pyth Solana receiver program", "type": "program", "protocol": "Pyth" },
+        { "address": "pythWSnswVUd12oZpeFP8e9CVaEqJg25g1Vtc2biRsT", "name": "Pyth push oracle program", "type": "program", "protocol": "Pyth" },
+        { "address": "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f", "name": "Switchboard v2 program", "type": "program", "protocol": "Switchboard" },
+        { "address": "SBondMDrcV3K4kxZR1HNVT7osZxAHVHgYXL5Ze1oMUv", "name": "Switchboard on-demand program", "type": "program", "protocol": "Switchboard" }
+      ]
+    },
+    { "name": "NFT & Metaplex", "category": "nft",
+      "entries": [
+        { "address": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s", "name": "Metaplex Token Metadata program", "type": "program", "protocol": "Metaplex", "source": "repo" },
+        { "address": "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY", "name": "Metaplex Bubblegum (cNFT) program", "type": "program", "protocol": "Metaplex" },
+        { "address": "CndyV3LdqHUfDLmE5naZjVN8rBZz4tqhdefbAnjHG3JR", "name": "Metaplex Candy Machine v3 program", "type": "program", "protocol": "Metaplex" },
+        { "address": "Guard1JwRhJkVH6XZhzoYxeBVQe872VH6QggF4BWmS9g", "name": "Metaplex Candy Guard program", "type": "program", "protocol": "Metaplex" },
+        { "address": "hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk", "name": "Metaplex Auction House program", "type": "program", "protocol": "Metaplex" },
+        { "address": "cmtDvXumGCrqC1Age74AVPhSRVXJMd8PJS91L8KbNCK", "name": "SPL Account Compression program", "type": "program", "protocol": "SPL" },
+        { "address": "noopb9bkMVfRPU8AsbpTUg8AQkHtKwMYZiFUjNRtMmV", "name": "SPL Noop program", "type": "program", "protocol": "SPL" },
+        { "address": "M2mx93ekt1fmXSVkTrUL9xVFHkmME8HTUi5Cyc5aF7K", "name": "Magic Eden v2 program", "type": "program", "protocol": "Magic Eden" },
+        { "address": "TSWAPaqyCSx2KABk68Shruf4rp7CxcNi8hAsbdwmHbN", "name": "Tensor Swap program", "type": "program", "protocol": "Tensor" },
+        { "address": "TCMPhJdwDryooaGtiocG1u3xcYbRpiJzb283XfCZsDp", "name": "Tensor cNFT marketplace program", "type": "program", "protocol": "Tensor" }
+      ]
+    },
+    { "name": "Bridges", "category": "bridge",
+      "entries": [
+        { "address": "worm2ZoG2kUd4vFXhvjh93UUH596ayRfgQ2MgjNMTth", "name": "Wormhole core bridge program", "type": "program", "protocol": "Wormhole" },
+        { "address": "wormDTUJ6AWPNvk59vGQbDvGJmqbDTdgWgAqcLBCgUb", "name": "Wormhole token bridge program", "type": "program", "protocol": "Wormhole" },
+        { "address": "WnFt12ZrnzZrFZkt2xsNsaNWoQribnuQ5B5FrDbwDhD", "name": "Wormhole NFT bridge program", "type": "program", "protocol": "Wormhole" },
+        { "address": "CCTPiPYPc6AsJuwueEnWgSgucamXDZwBd53dQ11YiKX3", "name": "Circle CCTP token messenger program", "type": "program", "protocol": "Circle CCTP" },
+        { "address": "CCTPmbSD7gX1bxKPAmg77w8oFzNFpaQiQUWD43TKaecd", "name": "Circle CCTP message transmitter program", "type": "program", "protocol": "Circle CCTP" },
+        { "address": "src5qyZHqTqecJV4aY6Cb6zDZLMDzrDKKezs22MPHr4", "name": "deBridge DLN source program", "type": "program", "protocol": "deBridge" },
+        { "address": "dst5MGcFPoBeREFAA5E3tU5ij8m5uVYwkzkSAbsLbNo", "name": "deBridge DLN destination program", "type": "program", "protocol": "deBridge" }
+      ]
+    },
+    { "name": "Wallet & infra programs", "category": "infra",
+      "entries": [
+        { "address": "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf", "name": "Squads v4 multisig program", "type": "program", "protocol": "Squads" },
+        { "address": "SMPLecH534NA9acpos4G6x7uf3LWbCAwZQE9e8ZekMu", "name": "Squads v3 multisig program", "type": "program", "protocol": "Squads" },
+        { "address": "L2TExMFKdjpN9kozasaurPirfHy9P8sbXoAN1qA3S95", "name": "Lighthouse assertion program", "type": "program", "protocol": "Lighthouse", "notes": "Wallets (e.g. Phantom, Solflare) append Lighthouse assertions to guard against unexpected balance changes." },
+        { "address": "namesLPneVptA9Z5rqUDD9tMTWEJwofgaYwp8cawRkX", "name": "SPL Name Service program", "type": "program", "protocol": "SNS" },
+        { "address": "GovER5Lthms3bLBqWub97yVrMmEogzX7xNjdXpPPCVZw", "name": "SPL Governance program", "type": "program", "protocol": "SPL", "category": "governance" },
+        { "address": "SPoo1Ku8WFXoNDMHPsrGSTSG1Y47rzgn41SLUNakuHy", "name": "SPL Stake Pool program", "type": "program", "protocol": "SPL", "category": "staking" }
+      ]
+    },
+    { "name": "Solana core", "category": "core", "website": "https://solana.com/docs",
+      "entries": [
+        { "address": "11111111111111111111111111111111", "name": "System program", "type": "program" },
+        { "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA", "name": "SPL Token program", "type": "program" },
+        { "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb", "name": "Token-2022 program", "type": "program" },
+        { "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL", "name": "Associated Token Account program", "type": "program" },
+        { "address": "ComputeBudget111111111111111111111111111111", "name": "Compute Budget program", "type": "program" },
+        { "address": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr", "name": "Memo program v2", "type": "program" },
+        { "address": "Memo1UhkJRfHyvLMcVucJwxXeuD728EqVDDwQDxFMNo", "name": "Memo program v1", "type": "program" },
+        { "address": "AddressLookupTab1e1111111111111111111111111", "name": "Address Lookup Table program", "type": "program" },
+        { "address": "Stake11111111111111111111111111111111111111", "name": "Stake program", "type": "program" },
+        { "address": "Vote111111111111111111111111111111111111111", "name": "Vote program", "type": "program" },
+        { "address": "Config1111111111111111111111111111111111111", "name": "Config program", "type": "program" },
+        { "address": "BPFLoaderUpgradeab1e11111111111111111111111", "name": "BPF Upgradeable Loader", "type": "program" },
+        { "address": "BPFLoader2111111111111111111111111111111111", "name": "BPF Loader 2", "type": "program" },
+        { "address": "BPFLoader1111111111111111111111111111111111", "name": "BPF Loader (deprecated)", "type": "program" },
+        { "address": "NativeLoader1111111111111111111111111111111", "name": "Native Loader", "type": "program", "onchain": false },
+        { "address": "Ed25519SigVerify111111111111111111111111111", "name": "Ed25519 signature verify program", "type": "program" },
+        { "address": "KeccakSecp256k11111111111111111111111111111", "name": "Secp256k1 signature verify program", "type": "program" },
+        { "address": "Sysvar1111111111111111111111111111111111111", "name": "Sysvar owner", "type": "sysvar" },
+        { "address": "SysvarC1ock11111111111111111111111111111111", "name": "Clock sysvar", "type": "sysvar" },
+        { "address": "SysvarRent111111111111111111111111111111111", "name": "Rent sysvar", "type": "sysvar" },
+        { "address": "Sysvar1nstructions1111111111111111111111111", "name": "Instructions sysvar", "type": "sysvar", "onchain": false },
+        { "address": "SysvarRecentB1ockHashes11111111111111111111", "name": "Recent blockhashes sysvar", "type": "sysvar" },
+        { "address": "SysvarS1otHashes111111111111111111111111111", "name": "Slot hashes sysvar", "type": "sysvar" },
+        { "address": "SysvarStakeHistory1111111111111111111111111", "name": "Stake history sysvar", "type": "sysvar" },
+        { "address": "SysvarEpochSchedu1e111111111111111111111111", "name": "Epoch schedule sysvar", "type": "sysvar" },
+        { "address": "1nc1nerator11111111111111111111111111111111", "name": "Incinerator (burn address)", "type": "wallet", "onchain": false }
+      ]
+    },
+    { "name": "Major tokens", "category": "token",
+      "entries": [
+        { "address": "So11111111111111111111111111111111111111112", "name": "Wrapped SOL (WSOL)", "type": "mint", "protocol": "Solana core", "source": "repo" },
+        { "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", "name": "USDC", "type": "mint", "protocol": "Circle", "source": "repo" },
+        { "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB", "name": "USDT", "type": "mint", "protocol": "Tether", "source": "repo" },
+        { "address": "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB", "name": "USD1", "type": "mint", "protocol": "World Liberty", "source": "repo" },
+        { "address": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo", "name": "PYUSD", "type": "mint", "protocol": "PayPal" },
+        { "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263", "name": "BONK", "type": "mint", "protocol": "Bonk", "source": "repo" },
+        { "address": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm", "name": "WIF (dogwifhat)", "type": "mint", "protocol": "dogwifhat", "source": "repo" },
+        { "address": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3", "name": "PYTH token", "type": "mint", "protocol": "Pyth" },
+        { "address": "bSo13r4TkiE4KumL71LsHTPpL2euBYLFx6h9HP3piy1", "name": "bSOL", "type": "mint", "protocol": "BlazeStake" },
+        { "address": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs", "name": "Wrapped ETH (Wormhole)", "type": "mint", "protocol": "Wormhole" },
+        { "address": "cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij", "name": "cbBTC", "type": "mint", "protocol": "Coinbase" },
+        { "address": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump", "name": "Fartcoin", "type": "mint", "protocol": "Fartcoin", "source": "repo" }
+      ]
+    }
+  ]
+}

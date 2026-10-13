@@ -1,0 +1,15 @@
+{
+  "name": "solana-address-indexer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Directory of known Solana addresses (launchpads, DEXes, fee recipients, program IDs) plus on-chain reverse lookup.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "bin": { "solidx": "src/cli.js" },
+  "scripts": {
+    "start": "node src/cli.js serve",
+    "sync": "node src/cli.js sync",
+    "verify": "node src/cli.js verify",
+    "test": "node --test"
+  }
+}

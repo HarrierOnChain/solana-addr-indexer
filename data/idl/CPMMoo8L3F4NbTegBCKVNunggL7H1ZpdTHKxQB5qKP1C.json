@@ -1,0 +1,46 @@
+{
+  "$comment": "Partial IDL for Raydium CPMM (the program publishes none on-chain). Only leading fields are listed; the decoder ignores trailing bytes.",
+  "metadata": { "name": "raydium_cp_swap" },
+  "accounts": [{ "name": "AmmConfig" }, { "name": "PoolState" }, { "name": "ObservationState" }],
+  "types": [
+    { "name": "AmmConfig", "type": { "kind": "struct", "fields": [
+      { "name": "bump", "type": "u8" },
+      { "name": "disable_create_pool", "type": "bool" },
+      { "name": "index", "type": "u16" },
+      { "name": "trade_fee_rate", "type": "u64" },
+      { "name": "protocol_fee_rate", "type": "u64" },
+      { "name": "fund_fee_rate", "type": "u64" },
+      { "name": "create_pool_fee", "type": "u64" },
+      { "name": "protocol_owner", "type": "pubkey" },
+      { "name": "fund_owner", "type": "pubkey" }
+    ] } },
+    { "name": "PoolState", "type": { "kind": "struct", "fields": [
+      { "name": "amm_config", "type": "pubkey" },
+      { "name": "pool_creator", "type": "pubkey" },
+      { "name": "token_0_vault", "type": "pubkey" },
+      { "name": "token_1_vault", "type": "pubkey" },
+      { "name": "lp_mint", "type": "pubkey" },
+      { "name": "token_0_mint", "type": "pubkey" },
+      { "name": "token_1_mint", "type": "pubkey" },
+      { "name": "token_0_program", "type": "pubkey" },
+      { "name": "token_1_program", "type": "pubkey" },
+      { "name": "observation_key", "type": "pubkey" },
+      { "name": "auth_bump", "type": "u8" },
+      { "name": "status", "type": "u8" },
+      { "name": "lp_mint_decimals", "type": "u8" },
+      { "name": "mint_0_decimals", "type": "u8" },
+      { "name": "mint_1_decimals", "type": "u8" },
+      { "name": "lp_supply", "type": "u64" },
+      { "name": "protocol_fees_token_0", "type": "u64" },
+      { "name": "protocol_fees_token_1", "type": "u64" },
+      { "name": "fund_fees_token_0", "type": "u64" },
+      { "name": "fund_fees_token_1", "type": "u64" },
+      { "name": "open_time", "type": "u64" }
+    ] } },
+    { "name": "ObservationState", "type": { "kind": "struct", "fields": [
+      { "name": "initialized", "type": "bool" },
+      { "name": "observation_index", "type": "u16" },
+      { "name": "pool_id", "type": "pubkey" }
+    ] } }
+  ]
+}

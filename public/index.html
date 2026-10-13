@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solana Address Indexer</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="#/">Address Indexer <span class="net">Solana mainnet</span></a>
+      <form id="search-form" class="search" role="search">
+        <input id="search" type="search" autocomplete="off" spellcheck="false"
+               placeholder="Search launchpads, DEXes, fee recipients… or paste any address">
+        <button type="submit">Go</button>
+      </form>
+      <nav class="tabs">
+        <a href="#/" data-tab="directory">Directory</a>
+        <a href="#/lookup" data-tab="lookup">Look up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="directory" hidden>
+      <div class="filters">
+        <div id="categories" class="chips" aria-label="Category"></div>
+        <div class="selects">
+          <label>Type <select id="type"><option value="">All types</option></select></label>
+          <label>Protocol <select id="protocol"><option value="">All protocols</option></select></label>
+        </div>
+      </div>
+      <p id="count" class="muted"></p>
+      <div id="results"></div>
+    </section>
+
+    <section id="lookup" hidden>
+      <form id="lookup-form" class="lookup-form">
+        <input id="lookup-input" autocomplete="off" spellcheck="false" placeholder="Paste a wallet, program, mint, pool, token account…">
+        <button type="submit">Identify</button>
+      </form>
+      <div id="lookup-result"></div>
+    </section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
