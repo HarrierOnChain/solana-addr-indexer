@@ -11,6 +11,25 @@ npm start                    # web UI + API on http://127.0.0.1:8787
 RPC_URL=https://... npm start  # use your own RPC (recommended; the public one rate-limits)
 ```
 
+## GitHub Pages
+
+`.github/workflows/pages.yml` runs the tests, re-syncs on-chain addresses, verifies
+every entry against mainnet and deploys a static build to GitHub Pages. It runs on
+every push to `main` and every 6 hours, so rotated fee recipients show up without a commit.
+Pull requests run the same checks without deploying.
+
+- One-time setup: **Settings → Pages → Source: GitHub Actions**.
+- Optional: add an `RPC_URL` repository secret so CI doesn't depend on the public RPC.
+
+The static site runs the same lookup code in the visitor's browser
+(`npm run build:pages` builds it into `_site/`). An import map swaps the few
+Node built-ins for `web/shims/` and the `buffer` package. Differences from the local server:
+
+- Lookups go from the browser to `solana-rpc.publicnode.com` by default
+  (`api.mainnet-beta.solana.com` rejects browser requests). Visitors can set their own RPC in the footer.
+  The default doesn't serve top holders or full transaction history.
+- Custom labels are stored in the visitor's browser (localStorage), not in `data/custom.json`.
+
 ## What it does
 
 **Directory**: filter by category (launchpad, dex, aggregator, mev…), type

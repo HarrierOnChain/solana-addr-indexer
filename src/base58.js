@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer';
 const ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
 const INDEX = new Map([...ALPHABET].map((c, i) => [c, BigInt(i)]));
 

@@ -16,7 +16,16 @@ function el(tag, attrs = {}, ...children) {
   return node;
 }
 
+// The GitHub Pages build sets window.INDEXER.static and ships static-api.js,
+// which answers the same /api routes from inside the browser.
+const CONFIG = window.INDEXER || {};
+let staticBackend = null;
+
 async function api(path, opts) {
+  if (CONFIG.static) {
+    staticBackend ??= import('./static-api.js').then((m) => m.createStaticApi());
+    return (await staticBackend)(path, opts);
+  }
   const res = await fetch(path, opts);
   const body = await res.json();
   if (!res.ok) throw new Error(body.error || `HTTP ${res.status}`);
@@ -256,7 +265,7 @@ function labelForm(r) {
   };
   return el('details', { class: 'card', open: r.labels.length === 0 || null },
     el('summary', {}, r.labels.length ? 'Add another label' : 'Know what this is? Label it'),
-    el('p', { class: 'muted' }, 'Saved to data/custom.json and shown everywhere this address appears.'),
+    el('p', { class: 'muted' }, f.labelsNote),
     form,
     custom.length > 0 && el('p', {},
       el('button', { class: 'ghost small', onclick: async () => {
@@ -267,6 +276,33 @@ function labelForm(r) {
       } }, `Remove my ${custom.length} label(s)`),
     ),
   );
+}
+
+function renderFooter() {
+  const f = state.facets;
+  const parts = [];
+  if (f.mode === 'static') {
+    const input = el('input', { name: 'rpc', type: 'url', placeholder: f.defaultRpc, value: f.rpcUrl === f.defaultRpc ? '' : f.rpcUrl, spellcheck: 'false', autocomplete: 'off' });
+    const form = el('form', { class: 'rpc-form' },
+      el('label', { for: 'rpc' }, 'RPC endpoint'),
+      input,
+      el('button', { type: 'submit', class: 'ghost small' }, 'Save'),
+    );
+    input.id = 'rpc';
+    form.onsubmit = async (ev) => {
+      ev.preventDefault();
+      try {
+        await api('/api/rpc', { method: 'POST', body: JSON.stringify({ url: input.value }) });
+        toast('RPC saved in this browser');
+        state.facets = await api('/api/facets');
+      } catch (e) {
+        toast(e.message);
+      }
+    };
+    parts.push(form, el('p', {}, 'Lookups run in your browser against this RPC. The public endpoint is rate-limited; paste your own (Helius, Triton, QuickNode…) for top-holder analysis. It is stored only in this browser.'));
+  }
+  if (CONFIG.repo) parts.push(el('p', {}, el('a', { href: CONFIG.repo, target: '_blank', rel: 'noopener noreferrer' }, 'Source on GitHub'), ' · addresses verified against mainnet on every build'));
+  $('footer').replaceChildren(...parts);
 }
 
 async function refreshFacets() {
@@ -298,7 +334,10 @@ $('lookup-form').addEventListener('submit', (ev) => {
 });
 window.addEventListener('hashchange', route);
 
-loadFacets().then(route).catch((e) => {
+loadFacets().then(() => {
+  renderFooter();
+  route();
+}).catch((e) => {
   $('results').replaceChildren(el('p', { class: 'error' }, `Could not reach the API: ${e.message}`));
   route();
 });

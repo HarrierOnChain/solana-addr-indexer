@@ -4,12 +4,17 @@
   "private": true,
   "description": "Directory of known Solana addresses (launchpads, DEXes, fee recipients, program IDs) plus on-chain reverse lookup.",
   "type": "module",
-  "engines": { "node": ">=20" },
-  "bin": { "solidx": "src/cli.js" },
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "solidx": "src/cli.js"
+  },
   "scripts": {
     "start": "node src/cli.js serve",
     "sync": "node src/cli.js sync",
     "verify": "node src/cli.js verify",
-    "test": "node --test"
+    "test": "node --test",
+    "build:pages": "node scripts/build-pages.js"
   }
 }

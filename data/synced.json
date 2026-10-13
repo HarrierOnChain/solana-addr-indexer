@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-13T07:01:53.608Z",
+  "syncedAt": "2026-10-13T08:10:16.683Z",
   "entries": [
     {
       "protocol": "Pump.fun",
@@ -7,7 +7,8 @@
       "address": "4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf",
       "name": "Pump.fun global state",
       "type": "config",
-      "source": "derived"
+      "source": "derived",
+      "origin": "derived"
     },
     {
       "protocol": "Pump.fun",
@@ -15,7 +16,8 @@
       "address": "Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr7XxXp9F1",
       "name": "Pump.fun event authority",
       "type": "pda",
-      "source": "derived"
+      "source": "derived",
+      "origin": "derived"
     },
     {
       "protocol": "Pump.fun",
@@ -24,7 +26,8 @@
       "name": "Pump.fun mint authority",
       "type": "authority",
       "notes": "Mint authority and metadata update authority of every Pump.fun token.",
-      "source": "derived"
+      "source": "derived",
+      "origin": "derived"
     },
     {
       "protocol": "Pump.fun",
@@ -32,7 +35,8 @@
       "address": "Hq2wp8uJ9jCPsYgNHex8RtqdvMPfVGoYwjvF1ATiwn2Y",
       "name": "Pump.fun global volume accumulator",
       "type": "pda",
-      "source": "derived"
+      "source": "derived",
+      "origin": "derived"
     },
     {
       "protocol": "Pump.fun",
@@ -40,7 +44,8 @@
       "address": "8Wf5TiAheLUqBrKXeYg2JtAFFMWtKdG2BSFgqUcPVwTt",
       "name": "Pump.fun fee config (fees program)",
       "type": "config",
-      "source": "derived"
+      "source": "derived",
+      "origin": "derived"
     },
     {
       "protocol": "PumpSwap",
@@ -48,7 +53,8 @@
       "address": "ADyA8hdefvWN2dbGGWFotbzWxrAvLW83WG6QCVXvJKqw",
       "name": "PumpSwap global config",
       "type": "config",
-      "source": "derived"
+      "source": "derived",
+      "origin": "derived"
     },
     {
       "protocol": "PumpSwap",
@@ -56,7 +62,8 @@
       "address": "GS4CU59F31iL7aR2Q8zVS8DRrcRnXX1yjQ66TqNVQnaR",
       "name": "PumpSwap event authority",
       "type": "pda",
-      "source": "derived"
+      "source": "derived",
+      "origin": "derived"
     },
     {
       "protocol": "PumpSwap",
@@ -64,7 +71,8 @@
       "address": "C2aFPdENg4A2HQsmrd5rTw5TaYBX5Ku887cWjbFKtZpw",
       "name": "PumpSwap global volume accumulator",
       "type": "pda",
-      "source": "derived"
+      "source": "derived",
+      "origin": "derived"
     },
     {
       "protocol": "PumpSwap",
@@ -72,624 +80,690 @@
       "address": "5PHirr8joyTMp9JMm6nW7hNDVyEYdkzDqazxPD7RaTjx",
       "name": "PumpSwap fee config (fees program)",
       "type": "config",
-      "source": "derived"
+      "source": "derived",
+      "origin": "derived"
     },
     {
       "protocol": "Jito",
       "category": "mev",
       "type": "tip-account",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "3AVi9Tg9Uo68tJfuvoKvqKNWKkC5wPdSSdeBnizKZ6jT",
       "name": "Jito tip account 1",
-      "notes": "From the Jito block engine getTipAccounts API."
+      "notes": "From the Jito block engine getTipAccounts API.",
+      "origin": "jito-tips"
     },
     {
       "protocol": "Jito",
       "category": "mev",
       "type": "tip-account",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "96gYZGLnJYVFmbjzopPSU6QiEV5fGqZNyN9nmNhvrZU5",
       "name": "Jito tip account 2",
-      "notes": "From the Jito block engine getTipAccounts API."
+      "notes": "From the Jito block engine getTipAccounts API.",
+      "origin": "jito-tips"
     },
     {
       "protocol": "Jito",
       "category": "mev",
       "type": "tip-account",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "ADaUMid9yfUytqMBgopwjb2DTLSokTSzL1zt6iGPaS49",
       "name": "Jito tip account 3",
-      "notes": "From the Jito block engine getTipAccounts API."
+      "notes": "From the Jito block engine getTipAccounts API.",
+      "origin": "jito-tips"
     },
     {
       "protocol": "Jito",
       "category": "mev",
       "type": "tip-account",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "ADuUkR4vqLUMWXxW9gh6D6L8pMSawimctcNZ5pGwDcEt",
       "name": "Jito tip account 4",
-      "notes": "From the Jito block engine getTipAccounts API."
+      "notes": "From the Jito block engine getTipAccounts API.",
+      "origin": "jito-tips"
     },
     {
       "protocol": "Jito",
       "category": "mev",
       "type": "tip-account",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "Cw8CFyM9FkoMi7K7Crf6HNQqf4uEMzpKw6QNghXLvLkY",
       "name": "Jito tip account 5",
-      "notes": "From the Jito block engine getTipAccounts API."
+      "notes": "From the Jito block engine getTipAccounts API.",
+      "origin": "jito-tips"
     },
     {
       "protocol": "Jito",
       "category": "mev",
       "type": "tip-account",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "DfXygSm4jCyNCybVYYK6DwvWqjKee8pbDmJGcLWNDXjh",
       "name": "Jito tip account 6",
-      "notes": "From the Jito block engine getTipAccounts API."
+      "notes": "From the Jito block engine getTipAccounts API.",
+      "origin": "jito-tips"
     },
     {
       "protocol": "Jito",
       "category": "mev",
       "type": "tip-account",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL",
       "name": "Jito tip account 7",
-      "notes": "From the Jito block engine getTipAccounts API."
+      "notes": "From the Jito block engine getTipAccounts API.",
+      "origin": "jito-tips"
     },
     {
       "protocol": "Jito",
       "category": "mev",
       "type": "tip-account",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "HFqU5x63VTqvQss8hp11i4wVV8bD44PvwucfZ2bU7gRe",
       "name": "Jito tip account 8",
-      "notes": "From the Jito block engine getTipAccounts API."
+      "notes": "From the Jito block engine getTipAccounts API.",
+      "origin": "jito-tips"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "FFWtrEQ4B4PKQoVuHYzZq8FabGkVatYzDpEVHsK5rrhF",
       "name": "Pump.fun admin authority",
-      "type": "authority"
+      "type": "authority",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
       "name": "Pump.fun fee recipient (primary)",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "7VtfL8fvgNfhz17qKRMjzQEXgbdpnHHHQRh54R9jP2RJ",
       "name": "Pump.fun fee recipient 1",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "7hTckgnGnLQR6sdH7YkqFTAA7VwTfYFaZ6EhEsU3saCX",
       "name": "Pump.fun fee recipient 2",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "9rPYyANsfQZw3DnDmKE3YCQF5E8oD89UXoHn9JFEhJUz",
       "name": "Pump.fun fee recipient 3",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "AVmoTthdrX6tKt4nDjco2D775W2YK3sDhxPcMmzUAmTY",
       "name": "Pump.fun fee recipient 4",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "CebN5WGQ4jvEPvsVU4EoHEpgzq1VV7AbicfhtW4xC9iM",
       "name": "Pump.fun fee recipient 5",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "FWsW1xNtWscwNmKv6wVsU1iTzRN6wmmk3MjxRP5tT7hz",
       "name": "Pump.fun fee recipient 6",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "G5UZAVbAf46s7cKWoyKu8kYTip9DGTpbLZ2qa9Aq69dP",
       "name": "Pump.fun fee recipient 7",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "5YxQFdt3Tr9zJLvkFccqXVUwhdTWJQc1fFg2YPbxvxeD",
       "name": "Pump buyback fee recipient 1",
       "type": "fee-recipient",
-      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these."
+      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "9M4giFFMxmFGXtc3feFzRai56WbBqehoSeRE5GK7gf7",
       "name": "Pump buyback fee recipient 2",
       "type": "fee-recipient",
-      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these."
+      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "GXPFM2caqTtQYC2cJ5yJRi9VDkpsYZXzYdwYpGnLmtDL",
       "name": "Pump buyback fee recipient 3",
       "type": "fee-recipient",
-      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these."
+      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "3BpXnfJaUTiwXnJNe7Ej1rcbzqTTQUvLShZaWazebsVR",
       "name": "Pump buyback fee recipient 4",
       "type": "fee-recipient",
-      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these."
+      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "5cjcW9wExnJJiqgLjq7DEG75Pm6JBgE1hNv4B2vHXUW6",
       "name": "Pump buyback fee recipient 5",
       "type": "fee-recipient",
-      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these."
+      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "EHAAiTxcdDwQ3U4bU6YcMsQGaekdzLS3B5SmYo46kJtL",
       "name": "Pump buyback fee recipient 6",
       "type": "fee-recipient",
-      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these."
+      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "5eHhjP8JaYkz83CWwvGU2uMUXefd3AazWGx4gpcuEEYD",
       "name": "Pump buyback fee recipient 7",
       "type": "fee-recipient",
-      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these."
+      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "A7hAgCzFw14fejgCp387JUJRMNyz4j89JKnhtKU8piqW",
       "name": "Pump buyback fee recipient 8",
       "type": "fee-recipient",
-      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these."
+      "notes": "Shared by Pump.fun and PumpSwap; buys must include one of these.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "GesfTA3X2arioaHp8bbKdjG9vJtskViWACZoYvxp4twS",
       "name": "Pump.fun reserved fee recipient (primary)",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "4budycTjhs9fD6xw62VBducVTNgMgJJ5BgtKq7mAZwn6",
       "name": "Pump.fun reserved fee recipient 1",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "8SBKzEQU4nLSzcwF4a74F2iaUDQyTfjGndn6qUWBnrpR",
       "name": "Pump.fun reserved fee recipient 2",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "4UQeTP1T39KZ9Sfxzo3WR5skgsaP6NZa87BAkuazLEKH",
       "name": "Pump.fun reserved fee recipient 3",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "8sNeir4QsLsJdYpc9RZacohhK1Y5FLU3nC5LXgYB4aa6",
       "name": "Pump.fun reserved fee recipient 4",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "Fh9HmeLNUMVCvejxCtCL2DbYaRyBFVJ5xrWkLnMH6fdk",
       "name": "Pump.fun reserved fee recipient 5",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "463MEnMeGyJekNZFQSTUABBEbLnvMTALbT6ZmsxAbAdq",
       "name": "Pump.fun reserved fee recipient 6",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "6AUH3WEHucYZyC61hqpqYUWVto5qA5hjHuNQ32GNnNxA",
       "name": "Pump.fun reserved fee recipient 7",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "39azUYFWPz3VHgKCf3VChUwbpURdCHRxjWVowf5jUJjg",
       "name": "Pump.fun withdraw authority",
-      "type": "authority"
+      "type": "authority",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "39azUYFWPz3VHgKCf3VChUwbpURdCHRxjWVowf5jUJjg",
       "name": "Pump.fun set-creator authority",
-      "type": "authority"
+      "type": "authority",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "UqN2p5bAzBqYdHXcgB6WLtuVrdvmy9JSAtgqZb3CMKw",
       "name": "Pump.fun admin set-creator authority",
-      "type": "authority"
+      "type": "authority",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "BwWK17cbHxwWBKZkUYvzxLcNQ1YVyaFezduWbtm2de6s",
       "name": "Pump.fun whitelist PDA",
-      "type": "pda"
+      "type": "pda",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "Pump.fun",
       "category": "launchpad",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "HckQ93Xqjjo8mwt5pNPWvyCTZXQZ858rvzmm7ZRrZg9t",
       "name": "Pump.fun holder-reward claim authority",
-      "type": "authority"
+      "type": "authority",
+      "origin": "Pump.fun:Global"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "FFWtrEQ4B4PKQoVuHYzZq8FabGkVatYzDpEVHsK5rrhF",
       "name": "PumpSwap admin",
-      "type": "authority"
+      "type": "authority",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
       "name": "PumpSwap protocol fee recipient 1",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "derived",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "94qWNrtmfn42h3ZjUZwWvK1MEo9uVmmrBPd2hpNjYDjb",
       "name": "PumpSwap protocol fee recipient 1 (WSOL account)",
-      "type": "fee-vault"
+      "type": "fee-vault",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "7VtfL8fvgNfhz17qKRMjzQEXgbdpnHHHQRh54R9jP2RJ",
       "name": "PumpSwap protocol fee recipient 2",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "derived",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "7GFUN3bWzJMKMRZ34JLsvcqdssDbXnp589SiE33KVwcC",
       "name": "PumpSwap protocol fee recipient 2 (WSOL account)",
-      "type": "fee-vault"
+      "type": "fee-vault",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "7hTckgnGnLQR6sdH7YkqFTAA7VwTfYFaZ6EhEsU3saCX",
       "name": "PumpSwap protocol fee recipient 3",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "derived",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "X5QPJcpph4mBAJDzc4hRziFftSbcygV59kRb2Fu6Je1",
       "name": "PumpSwap protocol fee recipient 3 (WSOL account)",
-      "type": "fee-vault"
+      "type": "fee-vault",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "9rPYyANsfQZw3DnDmKE3YCQF5E8oD89UXoHn9JFEhJUz",
       "name": "PumpSwap protocol fee recipient 4",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "derived",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "Bvtgim23rfocUzxVX9j9QFxTbBnH8JZxnaGLCEkXvjKS",
       "name": "PumpSwap protocol fee recipient 4 (WSOL account)",
-      "type": "fee-vault"
+      "type": "fee-vault",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "AVmoTthdrX6tKt4nDjco2D775W2YK3sDhxPcMmzUAmTY",
       "name": "PumpSwap protocol fee recipient 5",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "derived",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "FGptqdxjahafaCzpZ1T6EDtCzYMv7Dyn5MgBLyB3VUFW",
       "name": "PumpSwap protocol fee recipient 5 (WSOL account)",
-      "type": "fee-vault"
+      "type": "fee-vault",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "FWsW1xNtWscwNmKv6wVsU1iTzRN6wmmk3MjxRP5tT7hz",
       "name": "PumpSwap protocol fee recipient 6",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "derived",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "7xQYoUjUJF1Kg6WVczoTAkaNhn5syQYcbvjmFrhjWpx",
       "name": "PumpSwap protocol fee recipient 6 (WSOL account)",
-      "type": "fee-vault"
+      "type": "fee-vault",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "G5UZAVbAf46s7cKWoyKu8kYTip9DGTpbLZ2qa9Aq69dP",
       "name": "PumpSwap protocol fee recipient 7",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "derived",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "BWXT6RUhit9FfJQM3pBmqeFLPYmuxgmyhMGC5sGr8RbA",
       "name": "PumpSwap protocol fee recipient 7 (WSOL account)",
-      "type": "fee-vault"
+      "type": "fee-vault",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "JCRGumoE9Qi5BBgULTgdgTLjSgkCMSbF62ZZfGs84JeU",
       "name": "PumpSwap protocol fee recipient 8",
-      "type": "fee-recipient"
+      "type": "fee-recipient",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "derived",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "DWpvfqzGWuVy9jVSKSShdM2733nrEsnnhsUStYbkj6Nn",
       "name": "PumpSwap protocol fee recipient 8 (WSOL account)",
-      "type": "fee-vault"
+      "type": "fee-vault",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "GesfTA3X2arioaHp8bbKdjG9vJtskViWACZoYvxp4twS",
       "name": "PumpSwap reserved fee recipient (primary)",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "4budycTjhs9fD6xw62VBducVTNgMgJJ5BgtKq7mAZwn6",
       "name": "PumpSwap reserved fee recipient 1",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "8SBKzEQU4nLSzcwF4a74F2iaUDQyTfjGndn6qUWBnrpR",
       "name": "PumpSwap reserved fee recipient 2",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "4UQeTP1T39KZ9Sfxzo3WR5skgsaP6NZa87BAkuazLEKH",
       "name": "PumpSwap reserved fee recipient 3",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "8sNeir4QsLsJdYpc9RZacohhK1Y5FLU3nC5LXgYB4aa6",
       "name": "PumpSwap reserved fee recipient 4",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "Fh9HmeLNUMVCvejxCtCL2DbYaRyBFVJ5xrWkLnMH6fdk",
       "name": "PumpSwap reserved fee recipient 5",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "463MEnMeGyJekNZFQSTUABBEbLnvMTALbT6ZmsxAbAdq",
       "name": "PumpSwap reserved fee recipient 6",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "6AUH3WEHucYZyC61hqpqYUWVto5qA5hjHuNQ32GNnNxA",
       "name": "PumpSwap reserved fee recipient 7",
       "type": "fee-recipient",
-      "notes": "Mayhem-mode fee recipient."
+      "notes": "Mayhem-mode fee recipient.",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "UqN2p5bAzBqYdHXcgB6WLtuVrdvmy9JSAtgqZb3CMKw",
       "name": "PumpSwap admin set-coin-creator authority",
-      "type": "authority"
+      "type": "authority",
+      "origin": "PumpSwap:GlobalConfig"
     },
     {
       "protocol": "PumpSwap",
       "category": "dex",
       "source": "chain",
-      "syncedAt": "2026-10-13T07:01:53.608Z",
+      "syncedAt": "2026-10-13T08:10:16.683Z",
       "address": "BwWK17cbHxwWBKZkUYvzxLcNQ1YVyaFezduWbtm2de6s",
       "name": "PumpSwap whitelist PDA",
-      "type": "pda"
+      "type": "pda",
+      "origin": "PumpSwap:GlobalConfig"
     }
   ]
 }

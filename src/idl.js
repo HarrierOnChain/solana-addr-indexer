@@ -1,16 +1,32 @@
 // Anchor IDL support: fetch a program's IDL (on-chain, or a local copy in
 // data/idl/<programId>.json), recognise account types by discriminator and
 // decode account data with a small borsh reader.
-import { inflateSync } from 'node:zlib';
-import { readFileSync, existsSync } from 'node:fs';
-import path from 'node:path';
+// Runs in Node and in the browser (where node:* imports are mapped to shims).
+import { Buffer } from 'node:buffer';
+import { inflate } from 'node:zlib';
 import { encode } from './base58.js';
 import { anchorDiscriminator, anchorIdlAddress } from './pubkey.js';
 import { accountBytes } from './rpc.js';
-import { DATA_DIR } from './registry.js';
 
 const cache = new Map();
 const TTL_MS = 60 * 60 * 1000;
+
+const inflateAsync = (data) => new Promise((resolve, reject) => inflate(data, (err, out) => (err ? reject(err) : resolve(out))));
+
+/** Partial IDLs shipped in data/idl/ for programs that publish none on-chain. */
+async function loadLocalIdl(programId) {
+  const url = new URL(`../data/idl/${programId}.json`, import.meta.url);
+  try {
+    if (url.protocol === 'file:') {
+      const { readFile } = await import('node:fs/promises');
+      return JSON.parse(await readFile(url, 'utf8'));
+    }
+    const res = await fetch(url);
+    return res.ok ? await res.json() : null;
+  } catch {
+    return null;
+  }
+}
 
 export async function getIdl(rpc, programId) {
   const hit = cache.get(programId);
@@ -21,13 +37,12 @@ export async function getIdl(rpc, programId) {
     const data = accountBytes(acc);
     if (data && data.length > 44) {
       const len = data.readUInt32LE(40);
-      idl = JSON.parse(inflateSync(data.subarray(44, 44 + len)).toString('utf8'));
+      idl = JSON.parse((await inflateAsync(data.subarray(44, 44 + len))).toString('utf8'));
     }
   } catch {
     idl = null;
   }
-  const local = path.join(DATA_DIR, 'idl', `${programId}.json`);
-  if (!idl && existsSync(local)) idl = JSON.parse(readFileSync(local, 'utf8'));
+  if (!idl) idl = await loadLocalIdl(programId);
   cache.set(programId, { idl, at: Date.now() });
   return idl;
 }

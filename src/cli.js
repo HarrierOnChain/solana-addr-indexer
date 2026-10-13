@@ -78,9 +78,12 @@ async function main() {
     case 'unlabel':
       console.log(`Removed ${registry.removeCustom(pos[0])} label(s)`);
       break;
-    case 'sync':
-      await sync(rpc);
+    case 'sync': {
+      const { failed } = await sync(rpc);
+      // Surface partial failures in the GitHub Actions run summary.
+      if (failed.length && process.env.GITHUB_ACTIONS) console.log(`::warning title=sync::kept previous data for ${failed.join('; ')}`);
       break;
+    }
     case 'verify': {
       const failures = await verify(rpc, registry);
       process.exitCode = failures.length ? 1 : 0;

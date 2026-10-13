@@ -129,3 +129,9 @@ summary { cursor: pointer; font-weight: 600; }
   .kv { grid-template-columns: 1fr; }
   .kv dt { margin-top: 6px; }
 }
+
+/* footer (RPC setting on the static build) */
+.footer { padding-bottom: 40px; color: var(--muted); font-size: 13px; }
+.footer p { margin: 6px 0; }
+.rpc-form { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.rpc-form input { flex: 1; min-width: 200px; height: 30px; padding: 0 8px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface-2); font-family: var(--mono); font-size: 12px; }

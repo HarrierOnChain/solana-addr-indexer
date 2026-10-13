@@ -1,5 +1,6 @@
 // Reverse lookup: given any address, work out what it is.
 // Registry labels come first; everything else is read from chain.
+import { Buffer } from 'node:buffer';
 import { decode, encode, isAddress } from './base58.js';
 import {
   isOnCurve, pda, ata, addr,
@@ -64,7 +65,7 @@ export async function identify(input, { rpc, registry, holdings = false }) {
       ],
     });
   } else if (sigs) {
-    ctx.sections.push({ title: 'Activity', rows: [row('Transactions', 'none found')] });
+    ctx.sections.push({ title: 'Activity', rows: [row('Transactions', 'none returned by this RPC (some public RPCs keep only recent history)')] });
   }
 
   labelRows(ctx.sections, registry);
@@ -272,7 +273,7 @@ async function topHolders(ctx, mintAddress, rawSupply, decimals) {
   try {
     largest = (await rpc.getTokenLargestAccounts(mintAddress)).slice(0, 10);
   } catch (e) {
-    const why = /429/.test(e.message) ? 'rate-limited by the RPC; set RPC_URL to a private endpoint' : e.message;
+    const why = /429|403|token/i.test(e.message) ? 'not served by this RPC (rate-limited or needs an API key); use your own RPC endpoint' : e.message;
     ctx.sections.push({ title: 'Top holders', rows: [row('Unavailable', why)] });
     return { venues: [] };
   }

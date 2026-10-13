@@ -1,7 +1,7 @@
 // Pulls addresses that live in on-chain config accounts (fee recipients,
 // admins, authorities) and derives well-known PDAs, writing data/synced.json.
 // Add a new source by appending to SOURCES.
-import { writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { pda, ata, addr, WSOL_MINT } from './pubkey.js';
 import { accountBytes } from './rpc.js';
 import { getIdl, matchAccount, decodeAccount } from './idl.js';
@@ -90,38 +90,45 @@ async function jitoTipAccounts(now) {
   }));
 }
 
+async function readSource(rpc, src, now) {
+  const [idl, acc] = await Promise.all([getIdl(rpc, src.program), rpc.getAccountInfo(src.account, 'base64')]);
+  const data = accountBytes(acc);
+  const match = matchAccount(idl, data);
+  if (!match || match.name !== src.accountName) throw new Error(`${src.account} is not a ${src.accountName} per the IDL`);
+  const decoded = decodeAccount(idl, match, data);
+  return src.map(decoded).filter((e) => e.address).map((e) => ({ protocol: src.protocol, category: src.category, source: 'chain', syncedAt: now, ...e }));
+}
+
+/**
+ * Refreshes data/synced.json. A source that fails (RPC hiccup, layout change)
+ * keeps its previous entries instead of silently disappearing from the registry.
+ */
 export async function sync(rpc, log = console.log) {
   const now = new Date().toISOString();
-  const entries = DERIVED.map((e) => ({ ...e, source: 'derived' }));
+  const previous = existsSync(SYNCED_FILE) ? JSON.parse(readFileSync(SYNCED_FILE, 'utf8')).entries : [];
+  const entries = DERIVED.map((e) => ({ ...e, source: 'derived', origin: 'derived' }));
+  const failed = [];
 
-  try {
-    const tips = await jitoTipAccounts(now);
-    entries.push(...tips);
-    log(`✓ Jito: ${tips.length} tip accounts from the block engine`);
-  } catch (e) {
-    log(`! Jito tip accounts: ${e.message}; skipped`);
-  }
-
-  for (const src of SOURCES) {
-    const [idl, acc] = await Promise.all([getIdl(rpc, src.program), rpc.getAccountInfo(src.account, 'base64')]).catch((e) => {
-      log(`! ${src.protocol}: ${e.message}; skipped`);
-      return [];
-    });
-    const data = accountBytes(acc);
-    const match = matchAccount(idl, data);
-    if (!match || match.name !== src.accountName) {
-      log(`! ${src.protocol}: ${src.account} is not a ${src.accountName} per the IDL; skipped`);
-      continue;
+  const jobs = [
+    { origin: 'jito-tips', label: 'Jito tip accounts (block engine)', run: () => jitoTipAccounts(now) },
+    ...SOURCES.map((src) => ({ origin: `${src.protocol}:${src.accountName}`, label: `${src.protocol} ${src.accountName} (${src.account})`, run: () => readSource(rpc, src, now) })),
+  ];
+  for (const job of jobs) {
+    try {
+      const found = await job.run();
+      entries.push(...found.map((e) => ({ ...e, origin: job.origin })));
+      log(`✓ ${job.label}: ${found.length} addresses`);
+    } catch (e) {
+      const kept = previous.filter((p) => p.origin === job.origin);
+      entries.push(...kept);
+      failed.push(job.label);
+      log(`! ${job.label}: ${e.message}; kept ${kept.length} previous entries`);
     }
-    const decoded = decodeAccount(idl, match, data);
-    const found = src.map(decoded).filter((e) => e.address);
-    for (const e of found) entries.push({ protocol: src.protocol, category: src.category, source: 'chain', syncedAt: now, ...e });
-    log(`✓ ${src.protocol}: ${found.length} addresses from ${src.accountName} (${src.account})`);
   }
 
   // The same address can be listed by two sources (e.g. buyback recipients); keep one row per name.
   const unique = [...new Map(entries.map((e) => [`${e.address}|${e.name}`, e])).values()];
   writeFileSync(SYNCED_FILE, JSON.stringify({ syncedAt: now, entries: unique }, null, 2) + '\n');
   log(`Wrote ${unique.length} entries to data/synced.json`);
-  return unique;
+  return { entries: unique, failed };
 }

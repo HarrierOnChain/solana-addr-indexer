@@ -1,5 +1,6 @@
 // Address math with no dependencies: ed25519 on-curve test, PDA derivation,
 // associated token accounts, createWithSeed and Anchor discriminators.
+import { Buffer } from 'node:buffer';
 import { createHash } from 'node:crypto';
 import { encode, decode } from './base58.js';
 

@@ -1,7 +1,8 @@
+import { Buffer } from 'node:buffer';
 export const DEFAULT_RPC = 'https://api.mainnet-beta.solana.com';
 
 export class Rpc {
-  constructor(url = process.env.RPC_URL || DEFAULT_RPC) {
+  constructor(url = globalThis.process?.env?.RPC_URL || DEFAULT_RPC) {
     this.url = url;
     this.id = 0;
   }

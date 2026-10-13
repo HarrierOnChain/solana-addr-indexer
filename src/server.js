@@ -3,7 +3,6 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { identify } from './identify.js';
-import { CATEGORIES, TYPES } from './registry.js';
 
 const PUBLIC_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public');
 const STATIC = {
@@ -53,7 +52,7 @@ export function serve({ registry, rpc, port, host }) {
         return json(res, 200, registry.search({ ...q, limit: Number(q.limit) || 1000 }));
       }
       if (req.method === 'GET' && p === '/api/facets') {
-        return json(res, 200, { ...registry.facets(), allCategories: CATEGORIES, allTypes: TYPES });
+        return json(res, 200, { ...registry.facets(), mode: 'server', labelsNote: 'Saved to data/custom.json and shown everywhere this address appears.' });
       }
       if (req.method === 'GET' && p.startsWith('/api/whois/')) {
         const address = decodeURIComponent(p.slice('/api/whois/'.length));
